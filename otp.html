@@ -170,6 +170,8 @@ body {
         <input class="otp-input" type="tel" maxlength="1" pattern="[0-9]*" inputmode="numeric">
         <input class="otp-input" type="tel" maxlength="1" pattern="[0-9]*" inputmode="numeric">
         <input class="otp-input" type="tel" maxlength="1" pattern="[0-9]*" inputmode="numeric">
+       <input class="otp-input" type="tel" maxlength="1" pattern="[0-9]*" inputmode="numeric">
+       <input class="otp-input" type="tel" maxlength="1" pattern="[0-9]*" inputmode="numeric">
     </div>
 
     <div id="otpError" class="error-message" aria-live="polite"></div>
@@ -212,8 +214,8 @@ async function submitOTP() {
 
   clearError();
 
-  if (otp.length !== 4 || !savedPhone) {
-    showError("Please enter the 4-digit OTP sent to your phone.");
+  if (otp.length !== 6 || !savedPhone) {
+    showError("Please enter the 6-digit OTP sent to your phone.");
     return;
   }
 
